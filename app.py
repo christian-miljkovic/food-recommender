@@ -14,6 +14,7 @@ import os
 from flask import Flask
 from flask import request
 from flask import make_response
+from responses
 
 # Flask app should start in global layout
 app = Flask(__name__)
@@ -29,8 +30,11 @@ def webhook():
     res = processRequest(req)
 
     res = json.dumps(res, indent=4)
-    print(res)
-    r = make_response(res)
+    # print(res)
+    
+    r.add(body=res)
+
+
     r.headers['Content-Type'] = 'application/json'
     return r
 
@@ -63,7 +67,7 @@ def makeWebhookResult(data):
     return {
         "speech": speech,
         "displayText": speech,
-        "data": data,
+        "data": [],
         "contextOut": req['result']['contexts'],
         "source": "food-recommender"
     }
