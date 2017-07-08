@@ -58,14 +58,13 @@ def makeWebhookResult(data):
 
     speech = "Check out " + str(rec[neighborhood][food])
 
-    print("Response:")
-    print(speech)
+
 
     return {
         "speech": speech,
         "displayText": speech,
-        # "data": data,
-        # "contextOut": [],
+        "data": data,
+        "contextOut": [],
         "source": "food-recommender"
     }
 
