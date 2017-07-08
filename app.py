@@ -37,10 +37,10 @@ def makeWebhookResult(req):
 
 
 
-rec = {'Soho':{'pizza':'Prince Street Pizza','Italian':'Osteria Morini','Mexican':'La Esquina','Japense':'Ato'},
-       'Greenwich':{'pizza':'Joe\'s Pizza','Italian':'','Mexican':'','Japense':''}}
+    rec = {'Soho':{'pizza':'Prince Street Pizza','Italian':'Osteria Morini','Mexican':'La Esquina','Japense':'Ato'},
+           'Greenwich':{'pizza':'Joe\'s Pizza','Italian':'','Mexican':'','Japense':''}}
 
-    speech = "Check out " + rec[neighborhood][food]
+    speech = "Check out " + str(rec[neighborhood][food])
 
     print("Response:")
     print(speech)
