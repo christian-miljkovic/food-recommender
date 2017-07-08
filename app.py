@@ -32,23 +32,15 @@ def makeWebhookResult(req):
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
-    neighborhood = parameters.get("neighborhood")
-    food = parameters.get("food-type")
+    neighborhood = str(parameters.get("neighborhood"))
+    food = str(parameters.get("food-type"))
 
 
 
-    recommendation = {'SoHo':{'pizza':'Prince Street Pizza','Italian':'Osteria Morini','Mexican':'La Esquina','Japenese':'Ato','Indian':'Hampton Chutney','Thai':'Lan Larb Soho'}, 
-    'Midtown':{'pizza':'','Italian':'','Mexican':'','Japenese':'','Indian':'','Thai':''}, 
-    'Lower East Side':{'pizza':'','Italian':'','Mexican':'','Japenese':'','Indian':'','Thai':''}, 
-    'Tribeca':{'pizza':'','Italian':'','Mexican':'','Japenese':'','Indian':'','Thai':''},
-     'Chelsea':{'pizza':'','Italian':'','Mexican':'','Japenese':'','Indian':'','Thai':''}, 
-     'East Village':{'pizza':'','Italian':'','Mexican':'','Japenese':'','Indian':'','Thai':''}, 
-     'West Village':{'pizza':'','Italian':'','Mexican':'','Japenese':'','Indian':'','Thai':''}, 
-     'Greenwich Village':{'pizza':'','Italian':'','Mexican':'','Japenese':'','Indian':'','Thai':''}, 
-     'Gramercy':{'pizza':'','Italian':'','Mexican':'','Japenese':'','Indian':'','Thai':''}, 
-     'West Village':{'pizza':'','Italian':'','Mexican':'','Japenese':'','Indian':'','Thai':''}}
+rec = {'Soho':{'pizza':'Prince Street Pizza','Italian':'Osteria Morini','Mexican':'La Esquina','Japense':'Ato'},
+       'Greenwich':{'pizza':'Joe\'s Pizza','Italian':'','Mexican':'','Japense':''}}
 
-    speech = "Check out" + str(recommendation[neighborhood[food]])
+    speech = "Check out " + rec[neighborhood][food]
 
     print("Response:")
     print(speech)
