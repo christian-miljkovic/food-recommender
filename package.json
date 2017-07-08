@@ -1,0 +1,22 @@
+{
+  "name": "recommendation-q",
+  "version": "1.0.0",
+  "description": "recommendation using api.ai",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christian-miljkovic/food-recommender.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Christian Miljkovic <christian@nyclabs.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christian-miljkovic/food-recommender/issues"
+  },
+  "homepage": "https://github.com/christian-miljkovic/food-recommender#readme"
+}
