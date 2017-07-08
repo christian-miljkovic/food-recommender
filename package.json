@@ -2,7 +2,7 @@
   "name": "recommendation-q",
   "version": "1.0.0",
   "description": "recommendation using api.ai",
-  "main": "index.js",
+  "main": "app.py",
   "scripts": {
     "start": "python app.py"
   },
