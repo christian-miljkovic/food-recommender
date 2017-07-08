@@ -64,7 +64,7 @@ def makeWebhookResult(data):
         "speech": speech,
         "displayText": speech,
         "data": data,
-        "contextOut": [{"name":"weather", "lifespan":2, "parameters":{}}],
+        "contextOut": req['result']['contexts'],
         "source": "food-recommender"
     }
 
