@@ -1,11 +1,6 @@
 {
-  "name": "Recommendation Q",
-  "description": "TODO: Add a short description about Recommendation Q",
-  "keywords": [
-    "small",
-    "sharp",
-    "tool"
-  ],
-  "addons": [],
-  "env": {}
+  "name": "API.AI Food Rec Webhook",
+  "description": "API.AI Webhook Food Rec",
+  "repository": "https://github.com/christian-miljkovic/food-recommender.git",
+  "keywords": ["api.ai", "natural language"]
 }
