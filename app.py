@@ -14,7 +14,7 @@ import os
 from flask import Flask
 from flask import request
 from flask import make_response
-from responses
+from flask import responses
 
 # Flask app should start in global layout
 app = Flask(__name__)
