@@ -14,7 +14,6 @@ import os
 from flask import Flask
 from flask import request
 from flask import make_response
-from flask import responses
 
 # Flask app should start in global layout
 app = Flask(__name__)
@@ -32,7 +31,8 @@ def webhook():
     res = json.dumps(res, indent=4)
     print(res)
     
-    r.add(body=res)
+    r = make_response(res)
+    print(res)
 
 
     r.headers['Content-Type'] = 'application/json'
