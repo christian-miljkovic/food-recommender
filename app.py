@@ -29,13 +29,11 @@ def webhook():
     res = processRequest(req)
 
     res = json.dumps(res, indent=4)
-    print(res)
+    #print(res)
     
     r = make_response(res)
-    print(res)
-
-
     r.headers['Content-Type'] = 'application/json'
+    
     return r
 
 
@@ -67,8 +65,7 @@ def makeWebhookResult(data):
     return {
         "speech": speech,
         "displayText": speech,
-        "data": [],
-        "contextOut": req['result']['contexts'],
+        "data": data,
         "source": "food-recommender"
     }
 
