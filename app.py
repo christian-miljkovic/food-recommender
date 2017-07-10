@@ -31,7 +31,7 @@ def webhook():
     res = json.dumps(res, indent=4)
     #print(res)
     
-    r = make_response(res)
+    r = make_response(jsonify(res))
     r.headers['Content-Type'] = 'application/json'
     
     return r
@@ -66,6 +66,7 @@ def makeWebhookResult(data):
         "speech": speech,
         "displayText": speech,
         "data": data,
+        "contextOut": req['results']['contexts'],
         "source": "food-recommender"
     }
 
@@ -75,4 +76,4 @@ if __name__ == '__main__':
 
     print("Starting app on port %d" % port)
 
-    app.run(debug=False, port=port, host='0.0.0.0')
+    app.run(debug=True, port=port, host='0.0.0.0')
